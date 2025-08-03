@@ -12,6 +12,8 @@
     "d1:migrate:local": "wrangler d1 migrations apply millenium_db --local",
     "d1:console": "wrangler d1 execute millenium_db",
     "d1:console:local": "wrangler d1 execute millenium_db --local",
+    "db:generate": "drizzle-kit generate",
+    "db:apply:local": "wrangler d1 migrations apply DB --local",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src --ext .ts",
@@ -37,15 +39,19 @@
     "url": "https://github.com/eventos-100/millenium.git"
   },
   "dependencies": {
-    "@webflow/webflow-cli": "^1.8.30"
+    "@webflow/webflow-cli": "^1.8.30",
+    "drizzle-orm": "^0.36.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240729.0",
     "@types/node": "^20.14.8",
+    "better-sqlite3": "^11.6.0",
+    "drizzle-kit": "^0.31.2",
     "eslint": "^8.57.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "prettier": "^3.3.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.5.2",
     "wrangler": "^3.114.12"
   }

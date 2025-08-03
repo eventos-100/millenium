@@ -5,9 +5,9 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "millenium_db",
-      "database_id": "placeholder-will-update-after-deploy",
-      "migrations_dir": "./migrations"
+      "database_name": "millenium_db", 
+      "database_id": "auto-generated-by-webflow-cloud",
+      "migrations_dir": "drizzle"
     }
   ],
   "kv_namespaces": [
@@ -16,7 +16,7 @@
       "id": "placeholder-cache-id"
     },
     {
-      "binding": "SESSIONS",
+      "binding": "SESSIONS", 
       "id": "placeholder-sessions-id"
     }
   ],
