@@ -1,0 +1,502 @@
+<!-- Millenium Automotive - Webflow Form Examples -->
+<!-- Copy these form structures into your Webflow designer -->
+
+<!-- 1. PREMIUM LEAD CAPTURE FORM -->
+<div class="form-container">
+    <h2>Experience Luxury</h2>
+    <p>Connect with our premium concierge team</p>
+    
+    <form data-millenium="lead-form" class="lead-form">
+        <!-- Name Field -->
+        <div class="form-field">
+            <label for="name">Full Name *</label>
+            <input type="text" name="name" id="name" required placeholder="Your full name">
+        </div>
+        
+        <!-- Email Field -->
+        <div class="form-field">
+            <label for="email">Email Address *</label>
+            <input type="email" name="email" id="email" required placeholder="your.email@example.com">
+        </div>
+        
+        <!-- Phone Field -->
+        <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="+1 (555) 123-4567">
+        </div>
+        
+        <!-- Vehicle Interest -->
+        <div class="form-field">
+            <label for="vehicle_interest">Vehicle of Interest</label>
+            <select name="vehicle_interest" id="vehicle_interest">
+                <option value="">Select a vehicle</option>
+                <option value="Audi R8 Heritage">Audi R8 Heritage Edition</option>
+                <option value="Mercedes-Benz CLE Cabriolet">Mercedes-Benz CLE Cabriolet</option>
+                <option value="BMW M340i Sedan">BMW M340i Sedan</option>
+                <option value="BMW Z4 sDrive30i Roadster">BMW Z4 sDrive30i Roadster</option>
+                <option value="General Inquiry">General Inquiry</option>
+            </select>
+        </div>
+        
+        <!-- Message Field -->
+        <div class="form-field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="4" placeholder="Tell us about your automotive needs..."></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="btn-primary">
+            Connect with Concierge Team
+        </button>
+    </form>
+</div>
+
+<!-- 2. CONCIERGE TEST DRIVE FORM -->
+<div class="form-container">
+    <h2>Schedule Your Exclusive Test Drive</h2>
+    <p>Experience luxury with our white-glove service</p>
+    
+    <form data-millenium="test-drive-form" class="test-drive-form">
+        <!-- Hidden fields for vehicle info -->
+        <input type="hidden" name="vehicle_id" value="bmw-z4-sdrive30i-roadster">
+        <input type="hidden" name="vehicle_name" value="BMW Z4 sDrive30i Roadster">
+        
+        <!-- Personal Information -->
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="td_name">Full Name *</label>
+                    <input type="text" name="name" id="td_name" required>
+                </div>
+                
+                <div class="form-field">
+                    <label for="td_email">Email Address *</label>
+                    <input type="email" name="email" id="td_email" required>
+                </div>
+            </div>
+            
+            <div class="form-field">
+                <label for="td_phone">Phone Number *</label>
+                <input type="tel" name="phone" id="td_phone" required>
+            </div>
+        </div>
+        
+        <!-- Preferred Schedule -->
+        <div class="form-section">
+            <h3>Preferred Schedule</h3>
+            
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="preferred_date">Preferred Date</label>
+                    <input type="date" name="preferred_date" id="preferred_date">
+                </div>
+                
+                <div class="form-field">
+                    <label for="preferred_time">Preferred Time</label>
+                    <select name="preferred_time" id="preferred_time">
+                        <option value="">Select time</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="5:00 PM">5:00 PM</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Location Preference -->
+        <div class="form-section">
+            <div class="form-field">
+                <label for="dealer_location">Preferred Location</label>
+                <select name="dealer_location" id="dealer_location">
+                    <option value="Main Showroom">Main Showroom</option>
+                    <option value="Beverly Hills">Beverly Hills Boutique</option>
+                    <option value="Newport Beach">Newport Beach Location</option>
+                    <option value="Manhattan">Manhattan Flagship</option>
+                    <option value="At Your Location">Concierge Delivery (At Your Location)</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Special Requests -->
+        <div class="form-section">
+            <div class="form-field">
+                <label for="td_notes">Special Requests</label>
+                <textarea name="notes" id="td_notes" rows="3" placeholder="Any special requests for your test drive experience..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="btn-primary">
+            Schedule Concierge Test Drive
+        </button>
+    </form>
+</div>
+
+<!-- 3. VEHICLE CONFIGURATION TRACKER -->
+<!-- Add this to vehicle detail pages -->
+<div class="vehicle-configuration" data-vehicle-id="bmw-z4-sdrive30i-roadster">
+    
+    <!-- Configuration Options (customize based on your design) -->
+    <div class="config-section">
+        <h3>Exterior Color</h3>
+        <div class="color-options">
+            <button class="color-option" data-config-type="exterior_color" data-config-value="Alpine White">
+                Alpine White
+            </button>
+            <button class="color-option" data-config-type="exterior_color" data-config-value="Jet Black">
+                Jet Black
+            </button>
+            <button class="color-option" data-config-type="exterior_color" data-config-value="Storm Bay">
+                Storm Bay
+            </button>
+        </div>
+    </div>
+    
+    <!-- Package Options -->
+    <div class="config-section">
+        <h3>Packages</h3>
+        <div class="package-options">
+            <label class="package-option">
+                <input type="checkbox" data-config-type="packages" data-config-value="M Sport Package">
+                <span>M Sport Package (+$2,500)</span>
+            </label>
+            <label class="package-option">
+                <input type="checkbox" data-config-type="packages" data-config-value="Premium Package">
+                <span>Premium Package (+$3,200)</span>
+            </label>
+        </div>
+    </div>
+    
+    <!-- Price Display -->
+    <div class="price-display">
+        <div class="total-price">
+            <span class="price-label">Total Price:</span>
+            <span class="price-value" id="total-price">$56,100</span>
+        </div>
+        <div class="monthly-payment">
+            <span class="payment-label">Est. Monthly:</span>
+            <span class="payment-value" id="monthly-payment">$899/mo</span>
+        </div>
+    </div>
+    
+    <!-- Save Configuration Button -->
+    <button id="save-config" class="btn-secondary">
+        Save Configuration
+    </button>
+</div>
+
+<!-- 4. ANALYTICS TRACKING ELEMENTS -->
+<!-- Add these data attributes to track specific interactions -->
+
+<!-- Vehicle Detail Page -->
+<div class="vehicle-hero" data-vehicle-id="bmw-z4-sdrive30i-roadster">
+    <h1>BMW Z4 sDrive30i Roadster</h1>
+</div>
+
+<!-- Brochure Download -->
+<a href="/brochures/bmw-z4-brochure.pdf" 
+   class="download-brochure" 
+   data-millenium-track="brochure_download"
+   data-vehicle-id="bmw-z4-sdrive30i-roadster">
+    Download Brochure
+</a>
+
+<!-- Gallery Images -->
+<div class="vehicle-gallery">
+    <img src="/images/bmw-z4-exterior.jpg" 
+         alt="BMW Z4 Exterior" 
+         data-millenium-track="image_view"
+         data-image-type="exterior">
+    <img src="/images/bmw-z4-interior.jpg" 
+         alt="BMW Z4 Interior"
+         data-millenium-track="image_view" 
+         data-image-type="interior">
+</div>
+
+<!-- Call-to-Action Buttons -->
+<button class="cta-button" 
+        data-millenium-track="cta_click"
+        data-cta-type="request_quote">
+    Request Quote
+</button>
+
+<button class="cta-button" 
+        data-millenium-track="cta_click"
+        data-cta-type="schedule_visit">
+    Schedule Showroom Visit
+</button>
+
+<!-- JAVASCRIPT FOR CONFIGURATION TRACKING -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuration tracking
+    let currentConfig = {
+        exterior_color: 'Alpine White',
+        interior_color: 'Black',
+        packages: [],
+        options: []
+    };
+    
+    let basePrice = 56100;
+    let currentPrice = basePrice;
+    
+    // Handle configuration changes
+    document.addEventListener('click', function(e) {
+        if (e.target.matches('[data-config-type]')) {
+            const configType = e.target.getAttribute('data-config-type');
+            const configValue = e.target.getAttribute('data-config-value');
+            
+            if (configType === 'packages') {
+                // Handle checkbox packages
+                if (e.target.checked) {
+                    if (!currentConfig.packages.includes(configValue)) {
+                        currentConfig.packages.push(configValue);
+                    }
+                } else {
+                    currentConfig.packages = currentConfig.packages.filter(p => p !== configValue);
+                }
+            } else {
+                // Handle single selection options
+                currentConfig[configType] = configValue;
+            }
+            
+            // Update pricing (this would be more sophisticated in real implementation)
+            updatePricing();
+            
+            // Track configuration change
+            if (window.Millenium) {
+                window.Millenium.trackEvent('configuration_changed', {
+                    config_type: configType,
+                    config_value: configValue,
+                    total_price: currentPrice
+                });
+            }
+        }
+    });
+    
+    // Save configuration
+    document.getElementById('save-config')?.addEventListener('click', function() {
+        const vehicleId = this.closest('[data-vehicle-id]')?.getAttribute('data-vehicle-id');
+        const vehicleName = 'BMW Z4 sDrive30i Roadster'; // Get from page
+        
+        if (window.Millenium && window.Millenium.saveConfig) {
+            window.Millenium.saveConfig(
+                vehicleId,
+                vehicleName,
+                currentConfig,
+                currentPrice,
+                Math.round(currentPrice / 60) // Rough monthly estimate
+            );
+        }
+    });
+    
+    function updatePricing() {
+        // Simplified pricing logic
+        currentPrice = basePrice;
+        
+        // Add package costs
+        currentConfig.packages.forEach(pkg => {
+            if (pkg.includes('M Sport')) currentPrice += 2500;
+            if (pkg.includes('Premium')) currentPrice += 3200;
+        });
+        
+        // Update display
+        document.getElementById('total-price').textContent = '$' + currentPrice.toLocaleString();
+        document.getElementById('monthly-payment').textContent = '$' + Math.round(currentPrice / 60) + '/mo';
+    }
+    
+    // Track element interactions
+    document.addEventListener('click', function(e) {
+        if (e.target.matches('[data-millenium-track]')) {
+            const trackingType = e.target.getAttribute('data-millenium-track');
+            const vehicleId = e.target.getAttribute('data-vehicle-id') || getCurrentVehicleId();
+            
+            let metadata = { vehicle_id: vehicleId };
+            
+            // Add specific metadata based on tracking type
+            if (trackingType === 'image_view') {
+                metadata.image_type = e.target.getAttribute('data-image-type');
+            } else if (trackingType === 'cta_click') {
+                metadata.cta_type = e.target.getAttribute('data-cta-type');
+            }
+            
+            if (window.Millenium) {
+                window.Millenium.trackEvent(trackingType, metadata);
+            }
+        }
+    });
+    
+    function getCurrentVehicleId() {
+        return document.querySelector('[data-vehicle-id]')?.getAttribute('data-vehicle-id') || null;
+    }
+});
+</script>
+
+<!-- CSS STYLES FOR FORMS (Add to your Webflow custom CSS) -->
+<style>
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-field {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.form-section h3 {
+    margin: 0 0 1rem 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+}
+
+.color-options {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.color-option {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-option:hover,
+.color-option.selected {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.package-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.package-option input {
+    margin-right: 0.75rem;
+    width: auto;
+}
+
+.price-display {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.total-price, .monthly-payment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.price-value, .payment-value {
+    font-weight: 700;
+    color: #059669;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .color-options {
+        flex-direction: column;
+    }
+}
+</style>
