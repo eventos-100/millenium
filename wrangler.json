@@ -1,0 +1,33 @@
+{
+  "name": "millenium-automotive",
+  "compatibility_date": "2024-01-01",
+  "main": "src/index.ts",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "millenium_db",
+      "database_id": "placeholder-will-update-after-deploy",
+      "migrations_dir": "./migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "placeholder-cache-id"
+    },
+    {
+      "binding": "SESSIONS",
+      "id": "placeholder-sessions-id"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "millenium-media"
+    }
+  ],
+  "vars": {
+    "WEBFLOW_SITE_ID": "687bbc3b0bb3dd57d6c1fd83",
+    "WEBFLOW_API_URL": "https://api.webflow.com/v2"
+  }
+}
